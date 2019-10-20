@@ -1,0 +1,91 @@
+body{
+    margin: 0px;
+    padding: 0px;
+     
+
+    
+}
+
+button:hover{
+    background-color: gainsboro;
+    color: black;
+    transition-duration: 0.5s;
+    
+}
+
+nav{
+    position:fixed;
+    height:50px;
+    width:100%;
+    background-image: url(News-Image.gif);
+    background-size:cover;
+    padding:20px;
+    padding-left: 100px;
+    z-index: 1;
+   
+    
+    
+    
+}
+
+button{
+    
+    background-color:transparent;
+    font-size=19;
+    padding: 20px 28px;
+    border: none;
+    border-bottom: 1px solid;
+}
+
+.a{
+    font-family: sans-serif;
+    color: black;
+    width: 72%;
+    background-color: antiquewhite;
+    margin-left: 2%;
+    margin-top: 7%;
+}
+
+marquee{
+    background-color: #5DADE2;
+    padding:5px;
+    white-space: pre;
+    margin-top: 90px;
+}
+
+
+h1{
+    text-align: center;
+}
+
+
+body{
+            background-image:url(498776.jpg);
+    background-size: cover;
+        }
+        .signup{
+            position: absolute;
+            background: rgba(44,62,80,1);
+            width: 26%;
+            top:91px;
+            right: 0px;
+            height: 350px;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        
+        input{
+            margin-top: 10px;
+            text-align:center;
+            color: black;
+            align-content: center;
+        }
+        .warning{
+            display: none;
+            color: red;
+            font-size: 10px;
+        }
+        .conditions{
+            color: cornsilk;
+        }

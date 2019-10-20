@@ -1,0 +1,267 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styling.css" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <title>
+        Sports News
+    </title>
+</head>
+    <style>
+        
+        
+        #modal{
+            display: none;
+            background-color: rgba(0,0,0,0.7);
+            position:fixed;
+            height: 100%;
+            width:100%;
+            padding 20px;
+            left: 0px;
+            top: 0px;
+            color: beige;
+            z-index: 2;
+        }
+        
+        #container{
+            background-color: cornflowerblue;
+            position: relative;
+            height: 80%;
+            width: 40%;
+            padding: 20px;
+            left: 30%;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #close{
+            width: 50%;
+            border-radius: 5px;
+            background-color: azure;
+            margin-top: 40px;
+        }
+        
+        #close:hover{
+            
+        }
+        
+        .input{
+            position: relative;
+            width: 50%;
+            height: 40px;
+            top: 20px;
+            padding: 5px;
+            
+        }
+        hr{
+            height: 1px;
+            width: 100%;
+            background-color: black;
+        }
+        
+        .links{
+            display: block;
+            position: relative;
+            flex-direction: column;
+        }
+        #fb{
+            position: relative;
+            font-size: 50px;
+            color: black;
+            left: -10%;
+            margin-left: 50px;
+           
+        }
+        #user{
+            font-size: 70px;
+            position: relative;
+            top: 3%;
+        }
+        
+        #cross{
+            transform: rotate(45deg);
+            font-size: 30px;
+            position:absolute;
+            right: 2%;
+            top:   -6%;
+            
+        }
+        #warn{
+            color: greenyellow;
+            display: none;
+        }
+        
+        .slide{
+            top: -200px;
+            animation: 4s move;
+            animation-fill-mode: forwards;
+    
+        
+        @keyframes move{
+            0%{
+                transform: translate(0px,-200px);
+            }
+            100%{
+                transform: translate(0px,10%);
+            }
+        }
+        
+        
+    </style>
+    <body>   
+        <nav>
+            
+            <a href="Project.html"><button type="button">Home</button></a>
+            
+            <a href="Football.html"><button type="button">Football</button></a>
+            <a href="Teams.html"><button type="button">Teams</button></a>
+            
+        </nav>
+    
+        
+        <section>
+        <div class="a" style="display: inline-block">
+        <h1 style="font-family:sans-serif;">Everton stop Liverpool's way back to the Top</h1><br>
+            <img src="Liverpool%20vs%20everton.jpg" style="width: 50%%;height: 50%;margin-left: 20%;margin-top: 20px;"><br>
+            
+            
+            <p style="margin-left: 30px;margin-right: 10px;line-height: 1.6;margin-bottom: 30px;">
+            Everton stopped Liverpool from reclaiming top spot in the Premier League with a hard-fought goalless draw at Goodison Park.<br>
+                
+            Liverpool had the best chance in the first half but Mohamed Salah was stopped by Jordan Pickford when through on goal.<br>
+            After the break Salah again had a chance, but a last-ditch challenge from Michael Keane denied him.<br>
+            In similar fashion, Fabinho seemed destined to score from a Virgil van Dijk knockdown, but Lucas Digne intercepted just in time.
+            Everton came closest when substitute Richarlison's low cross was narrowly missed by Bernard.<br>
+            A fourth draw in six PL matches leaves Liverpool second on 70 points, one behind Manchester City.
+            Everton are 10th on 37 points.
+                
+            </p>
+        
+        </div>
+                
+        <div class="signup">
+            
+        <input type="text" placeholder="Firstname" style="padding:10;border-radius:5px;" id="name"><br>
+        <input type="text" id="lname" placeholder="Lastname" style="padding:10;border-radius:5px;"><br>
+        <input type="text" id="mail" placeholder="Your Email. eg:abc@gmail.com" style="padding:10;border-radius:5px;"><br>
+        <input type="password" id="pass" placeholder="Password" style="padding:10;border-radius:5px;"><br>
+            <p class="conditions">By Creating an Account you agree to our Terms and Conditions.</p>
+        
+        <button style="padding:10px 20px;border-radius:5px;background-color: darkgray;" id="signupbutton" type="submit">SignUp</button>
+        <button style="padding:10px 20px;border-radius:5px;background-color: darkgray;" id="login">Login</button>
+            <p class="warning">*make sure the length of your passwoed is atlease 6 characters long</p>
+        
+        </div>
+            
+            
+            </section>
+        <div id="modal">
+            <div id="container">
+                <p id="cross" onclick="cross()" style="cursor: pointer">+</p>
+                <i class="fa fa-user-circle" aria-hidden="true" id="user"></i>
+                <input type="text" class="input" placeholder="Username" id="us"><br>
+                <input type="password" class="input" placeholder="Password" id="ps"><br>
+                <p id="warn">*LESS THAN 6 CHARACTERS. REENETR PASSOWRD</p>
+                <p></p>
+                <button id="close" onclick="closeDiv()" style="cursor: pointer">Submit</button><br>
+                <p>OR CONNECT WITH</p>
+                <hr><br>
+                <div class="links">
+                <i class="fa fa-facebook-square" aria-hidden="true" id="fb"></i>
+                <i class="fa fa-google" aria-hidden="true" id="fb"></i>
+                <i class="fa fa-twitter-square" aria-hidden="true" id="fb"></i>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+    
+    
+    </body>
+    
+    
+    <script src="jquery.js"></script>
+    <script>
+        document.getElementById("signupbutton").addEventListener("click",marked);
+        document.getElementById("login").addEventListener("click",showDiv);
+
+        
+        function marked(){
+            var nam=document.getElementById("name").value;
+            if(nam===""){
+                document.getElementById("name").style.borderColor="red";
+                document.getElementById("name").style.borderWidth="2px";
+               
+            }
+        }
+        
+        document.getElementById("signupbutton").addEventListener("click",marked1);
+        
+        function marked1(){
+            var nam=document.getElementById("lname").value;
+            if(nam===""){
+                document.getElementById("lname").style.borderColor="red";
+                document.getElementById("lname").style.borderWidth="2px";
+               
+            }
+        }
+        
+        document.getElementById("signupbutton").addEventListener("click",marked2);
+        
+        function marked2(){
+            var nam=document.getElementById("mail").value;
+            if(!nam.includes("@")&&!nam.includes(".com")){
+                document.getElementById("mail").style.borderColor="red";
+                document.getElementById("mail").style.borderWidth="2px";
+                document.getElementsByClassName("warning")[0].innerHTML="*enter a valid email adress";
+                document.getElementsByClassName("warning")[0].style.display="block";
+               
+            }
+        }
+        
+        
+        document.getElementById("signupbutton").addEventListener("click",marked3);
+        
+        function marked3(){
+            var nam=document.getElementById("pass").value;
+            if(nam.length<6){
+                document.getElementById("pass").style.borderColor="red";
+                document.getElementById("pass").style.borderWidth="2px";
+                document.getElementsByClassName("warning")[0].style.display="block";
+               
+            }
+        }
+        
+        function showDiv(){
+            document.getElementById("modal").style.display="block";
+            
+        }
+        
+        
+        function closeDiv(){
+            var le=document.getElementById("ps").value;
+            if(le.length<6){
+                document.getElementById("warn").style.display="block";
+                var em=document.getElementById("us").value;
+                if(em===""){
+                    document.getElementById("warn").innerHTML="enter username.Enter password";
+                    document.getElementById("warn").style.display="block";
+                }
+            }
+            else{
+            document.getElementById("modal").style.display="none";
+            }
+        }
+    function cross(){
+         document.getElementById("modal").style.display="none";
+    }
+    
+    
+    </script>
+
+
+</html>
